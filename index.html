@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even || Odd number Checker!</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="box">
+        <h1>Check  number is even or odd!</h1>
+        <label>Enter your desire Number:</label>
+        <br>
+        <input type="number" placeholder="Even || Odd" id="number">
+        <br><br>
+
+        <button onclick="input()">Check it !</button>
+
+        <p id="show"></p>
+    </div>
+
+    <!-- JS functionality start -->
+
+    <script>
+        // Function to check if a number is even or odd
+        function input() {
+            let number = document.getElementById("number").value;
+            let parsedNumber = parseInt(number);
+
+            if (isNaN(parsedNumber)) {
+                document.getElementById("show").innerHTML = "Please enter a valid number.";
+            } else if (parsedNumber % 2 === 0) {
+                document.getElementById("show").innerHTML = parsedNumber + " is an even number.";
+            } else {
+                document.getElementById("show").innerHTML = parsedNumber + " is an odd number.";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
